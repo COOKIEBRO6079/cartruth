@@ -1,0 +1,49 @@
+document.getElementById("analyzeBtn").addEventListener("click", analyzeCar);
+
+async function analyzeCar() {
+
+    const results = document.getElementById("results");
+
+    results.innerHTML = "<h2>Analyzing...</h2>";
+
+    try {
+
+        const response = await fetch("/analyze", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                year: document.getElementById("year").value,
+                make: document.getElementById("make").value,
+                model: document.getElementById("model").value,
+                mileage: document.getElementById("mileage").value,
+                price: document.getElementById("price").value
+            })
+        });
+
+        console.log(response);
+
+        const data = await response.json();
+             console.log(data);
+              alert(JSON.stringify(data));
+                   console.log(data);
+
+        results.innerHTML = `
+            <div class="result-card">
+                <pre>${data.text}</pre>
+            </div>
+        `;
+
+    } catch (err) {
+
+        console.error(err);
+
+        results.innerHTML = `
+            <h2>ERROR</h2>
+            <p>${err.message}</p>
+        `;
+
+    }
+
+}
