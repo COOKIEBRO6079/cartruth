@@ -1,0 +1,27 @@
+{
+  "name": "cartruth",
+  "version": "1.0.0",
+  "description": "CarTruth helps drivers make smarter decisions by analyzing used cars, estimating repair costs, tracking maintenance, and providing AI-powered insights before buying or owning a vehicle.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/COOKIEBRO6079/cartruth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/COOKIEBRO6079/cartruth/issues"
+  },
+  "homepage": "https://github.com/COOKIEBRO6079/cartruth#readme",
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

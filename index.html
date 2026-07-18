@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarTruth AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>🚗 CarTruth</h1>
+    </nav>
+    <section class="hero">
+        <h1>Know The Truth Before You Buy</h1>
+        <p>AI-powered used car analysis.</p>
+        <div class="card">
+            <!-- Single set of vehicle inputs -->
+            <input id="year" type="number" placeholder="Year">
+            <input id="make" type="text" placeholder="Make">
+            <input id="model" type="text" placeholder="Model">
+            <input id="trim" type="text" placeholder="Trim / Package (LT, XLT, 2500HD...)">
+            <input id="mileage" type="number" placeholder="Mileage">
+            <input id="price" type="number" placeholder="Seller Price">
+            <!-- Only one single action button -->
+            <button onclick="analyzeCar()">Analyze Vehicle</button>
+        </div>
+    </section>
+    <section id="results"></section>
+    <script src="script.js"></script>
+</body>
+</html>
